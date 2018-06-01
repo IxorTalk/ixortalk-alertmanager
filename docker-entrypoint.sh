@@ -32,10 +32,13 @@ IXORTALK_CONFIG_SERVER_LABEL=${IXORTALK_CONFIG_SERVER_LABEL:="master"}
 IXORTALK_CONFIG_SERVER_URL=${IXORTALK_CONFIG_SERVER_URL:="http://ixortalk-config-server:8899/config"}
 
 wget ${IXORTALK_CONFIG_SERVER_URL}/ixortalk.prometheus/${IXORTALK_PROFILE}/${IXORTALK_CONFIG_SERVER_LABEL}/alertmanager.yml -O /etc/alertmanager/config.yml
-wget ${IXORTALK_CONFIG_SERVER_URL}/ixortalk.prometheus/${IXORTALK_PROFILE}/${IXORTALK_CONFIG_SERVER_LABEL}/template-vars/${IXORTALK_PROFILE}.tmpl -O /etc/alertmanager/template-vars.tmpl
 
-mkdir -p /etc/alertmanager/templates
-wget ${IXORTALK_CONFIG_SERVER_URL}/ixortalk.prometheus/${IXORTALK_PROFILE}/${IXORTALK_CONFIG_SERVER_LABEL}/templates/ixortalk.tmpl -O /etc/alertmanager/templates/ixortalk.tmpl
-wget ${IXORTALK_CONFIG_SERVER_URL}/ixortalk.prometheus/${IXORTALK_PROFILE}/${IXORTALK_CONFIG_SERVER_LABEL}/templates/customer.tmpl -O /etc/alertmanager/templates/customer.tmpl
+if [ "${IXORTALK_ALERTMANAGER_USE_TEMPLATES}" = true ] ; then
+    wget ${IXORTALK_CONFIG_SERVER_URL}/ixortalk.prometheus/${IXORTALK_PROFILE}/${IXORTALK_CONFIG_SERVER_LABEL}/template-vars/${IXORTALK_PROFILE}.tmpl -O /etc/alertmanager/template-vars.tmpl
+
+    mkdir -p /etc/alertmanager/templates
+    wget ${IXORTALK_CONFIG_SERVER_URL}/ixortalk.prometheus/${IXORTALK_PROFILE}/${IXORTALK_CONFIG_SERVER_LABEL}/templates/ixortalk.tmpl -O /etc/alertmanager/templates/ixortalk.tmpl
+    wget ${IXORTALK_CONFIG_SERVER_URL}/ixortalk.prometheus/${IXORTALK_PROFILE}/${IXORTALK_CONFIG_SERVER_LABEL}/templates/customer.tmpl -O /etc/alertmanager/templates/customer.tmpl
+fi
 
 /bin/alertmanager $@
