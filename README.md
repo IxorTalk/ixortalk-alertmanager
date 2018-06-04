@@ -2,7 +2,7 @@
 
 For general documentation about the IxorTalk platform: https://github.com/ixortalk/ixortalk-gateway
 
-IxorTalk Alertmanager is a docker wrapper around [Prometheus](https://prometheus.io/) Alertmanager to pull its configuration from the config server.
+IxorTalk Alertmanager is a docker wrapper around [Prometheus](https://prometheus.io/) Alertmanager which pulls its configuration from the config server.
 
 ## Building
 
