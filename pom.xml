@@ -34,7 +34,7 @@
 
     <name>ixortalk-alertmanager</name>
     <description>IxorTalk docker for Alertmanager</description>
-    <url>https://github.com/ixortalkadmin/ixortalk-alertmanager/tree/master</url>
+    <url>https://github.com/ixortalk/ixortalk-alertmanager/tree/master</url>
 
     <organization>
         <name>IxorTalk CVBA</name>
@@ -71,7 +71,7 @@
     <scm>
         <connection>scm:git:git@github.com:ixortalkadmin/ixortalk-alertmanager.git</connection>
         <developerConnection>scm:git:git@github.com:ixortalkadmin/ixortalk-alertmanager.git</developerConnection>
-        <url>https://github.com/ixortalkadmin/ixortalk-alertmanager/tree/master</url>
+        <url>https://github.com/ixortalk/ixortalk-alertmanager/tree/master</url>
         <tag>HEAD</tag>
     </scm>
 
