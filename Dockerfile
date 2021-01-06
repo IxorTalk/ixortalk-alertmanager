@@ -22,7 +22,7 @@
 # SOFTWARE.
 #
 
-FROM prom/alertmanager:v2.23.0
+FROM prom/alertmanager:v0.21.0
 ADD docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
 ENTRYPOINT ["/docker-entrypoint.sh"]
