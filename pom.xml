@@ -29,7 +29,7 @@
 
     <groupId>com.ixortalk</groupId>
     <artifactId>ixortalk-alertmanager</artifactId>
-    <version>3.0.2</version>
+    <version>3.0.3-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>ixortalk-alertmanager</name>
@@ -72,7 +72,7 @@
         <connection>scm:git:git@github.com:ixortalk/ixortalk-alertmanager.git</connection>
         <developerConnection>scm:git:git@github.com:ixortalk/ixortalk-alertmanager.git</developerConnection>
         <url>https://github.com/ixortalk/ixortalk-alertmanager/tree/master</url>
-        <tag>ixortalk-alertmanager-3.0.2</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
