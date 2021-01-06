@@ -23,7 +23,9 @@
 #
 
 FROM prom/alertmanager:v0.21.0
+USER root
 ADD docker-entrypoint.sh /
 RUN chmod +x /docker-entrypoint.sh
+USER nobody
 ENTRYPOINT ["/docker-entrypoint.sh"]
 HEALTHCHECK CMD wget -q http://localhost:9093/alertmanager -O /dev/null
